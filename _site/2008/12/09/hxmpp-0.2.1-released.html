@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="en" />
+<meta name="description" content="Panzerkunst">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta name="author" content="disktree.net">
+<meta name="publisher" content="disktree.net">
+<title>HXMPP 0.2.1 released</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/css/disktree.css">
+<script type="text/javascript" src="/js/jquery.js"></script>
+</head>
+<body>
+<div id="header">
+	<a href="/">DISKTREE.NET // PANZERKUNST</a>
+	<a href="http://jabber.spektral.at/roar/">ROAR</a>
+	<a class="rss" href="/atom.xml">SYNDICATE</a>
+</div>
+<div id="content"><div class="post">
+<p>..introducing a lot of fixes and minor additions.
+Sadly there are some important things on my TODO list missing for the planned version 0.3.</p>
+
+<p>Currently i am using 3 experimental applications based on the library:</p>
+
+<ul>
+<li><p>A git respository bot, which sends me ( and just me.lol ) a message after a succesful commit. (neko)</p></li>
+<li><p>A multi user chat bot. (neko)</p></li>
+<li><p>A multi user chat service at jabber.spektral.at. (flash9)
+For now this is just an testing ui for hxmpps muc implementation. Theoretically you can use any jabber account for this, practically not, since most jabber servers does not provide a flash policy server to allow connections to a different domain.
+Please bother your jabber server administrator to install one !!
+You can test your host for this with:
+python -c ‘print “<policy-file-request/>%c” % 0′ | nc HOSTNAME 843</p></li>
+</ul>
+
+
+<p>A simple example of using the library from plain js ( with a precompiled js ) can be found here.</p>
+
+<p>[ source ]
+[ git://83.64.208.21/hxmpp.git ]</p>
+
+</div>
+</div>
+</body>
+</html>

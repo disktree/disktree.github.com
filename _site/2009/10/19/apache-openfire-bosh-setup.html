@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="en" />
+<meta name="description" content="Panzerkunst">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta name="author" content="disktree.net">
+<meta name="publisher" content="disktree.net">
+<title>Apache/Openfire BOSH setup</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/css/disktree.css">
+<script type="text/javascript" src="/js/jquery.js"></script>
+</head>
+<body>
+<div id="header">
+	<a href="/">DISKTREE.NET // PANZERKUNST</a>
+	<a href="http://jabber.spektral.at/roar/">ROAR</a>
+	<a class="rss" href="/atom.xml">SYNDICATE</a>
+</div>
+<div id="content"><div class="post">
+<p>Since HXMPP supports BOSH connections (flash/js) it’s time to write a little setup instruction….
+In my (local) case for apache2/openfire 3.6.4 on ubuntu 9.04.
+What has to be done is to be able to connect your client to the BOSH adress of your jabber server. Default on openfire is http://localhost:7070/http-bind/</p>
+
+<p>Your apache server doesn’t know about your jabber server, so you have to setup a proxy to forward requests:
+http://localhost/jabber/ > http://localhost:7070/http-bind/</p>
+
+<p>Here we go:</p>
+
+<h1>Activate the mod_proxy apache module if required</h1>
+
+<p>sudo ln /etc/apache2/mods-available/proxy.load /etc/apache2/mods-enabled</p>
+
+<h1>Add following line to proxy.load for loading the module</h1>
+
+<p>LoadModule proxy_http_module /usr/lib/apache2/modules/mod_proxy_http.so</p>
+
+<h1>Add the proxy directive to the host settings in your http.conf</h1>
+
+<p>ProxyRequests Off
+ProxyPass /jabber http://localhost:7070/http-bind/
+ProxyPassReverse /jabber http://localhost:7070/http-bind/
+ProxyPass /jabbers http://localhost:7443/http-bind/
+ProxyPassReverse /jabbers http://localhost:7443/http-bind/</p>
+
+<h1>Restart apache</h1>
+
+<p>sudo /etc/init.d/apache2 restart</p>
+
+<p>Thats it!
+Using HXMPP, you can now create a connection by passing in the path in the constructor, like:
+var cnx = new BOSHConnection( “myjabberserver.net”, “127.0.0.1/jabber/” );</p>
+
+</div>
+</div>
+</body>
+</html>

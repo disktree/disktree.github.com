@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="en" />
+<meta name="description" content="Panzerkunst">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta name="author" content="disktree.net">
+<meta name="publisher" content="disktree.net">
+<title>HXMPP Publish Subscribe</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/css/disktree.css">
+<script type="text/javascript" src="/js/jquery.js"></script>
+</head>
+<body>
+<div id="header">
+	<a href="/">DISKTREE.NET // PANZERKUNST</a>
+	<a href="http://jabber.spektral.at/roar/">ROAR</a>
+	<a class="rss" href="/atom.xml">SYNDICATE</a>
+</div>
+<div id="content"><div class="post">
+<p>Today i’ve added PubSub support to our HXMPP library.
+Pubsub is a notification system like web syndication (RSS, Atom, ..) for the XMPP protocol with some great advantages:</p>
+
+<ul>
+<li><p>Realtime. Unlike regular web syndication, pubsub is a pushing system.
+As soon as a new item is published at a node, the service notifies all registered subscribers. This is the last hurdle (in terms of time) evolution of global information technology is overcoming by delivering information for human unrecognizeable delays (millisecondes). Unlike rss, email,.. more like global smoke signals. )</p></li>
+<li><p>Bandwith. New information is pushed only once.
+Assume you have 50 feeds on your watchlist and every feed is about 10k in size and gets polled every 30 mins (the default configuration time in my RSS-reader), .. you end up having 1mb polled in 1h (720mb/month) mostly for /dev/null space since a lot of feeds just update in day intervals. This produces unecassery cost$ if you don’t have a flatrate connection (keyword mobile). Not to mention the extra costs for network transfer at servers (and power consumption)!</p></li>
+<li><p>Configuration is built into the service itself, not in the software you use for.
+Publishers are able to config their service to their needs (like: manage subscription requests, cache items, not routing events to offline storage, block users,..).
+Subscribers can config their subscriptions, for example: to get just the title of the published data (bandwith again!) or to set the presence types which are allowed to receive notifications.</p></li>
+</ul>
+
+
+<p>Overall the current system (RSS stuff) is doing it completely wrong and hopefully gets dropped and replaced by pubsub like systems very soon!</p>
+
+</div>
+</div>
+</body>
+</html>

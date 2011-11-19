@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="en" />
+<meta name="description" content="Panzerkunst">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta name="author" content="disktree.net">
+<meta name="publisher" content="disktree.net">
+<title>HXMPP 0.4.3 released</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/css/disktree.css">
+<script type="text/javascript" src="/js/jquery.js"></script>
+</head>
+<body>
+<div id="header">
+	<a href="/">DISKTREE.NET // PANZERKUNST</a>
+	<a href="http://jabber.spektral.at/roar/">ROAR</a>
+	<a class="rss" href="/atom.xml">SYNDICATE</a>
+</div>
+<div id="content"><div class="post">
+<p>Main changes:</p>
+
+<ul>
+    <li>Now available on github: http://github.com/tong/hxmpp</li>
+    <li>Packet-ID-collectors are processed before others
+    Most XEPS do just single IQ packet get/set -> result/error requests, but cause of XMPPs pushing nature must also listen for requests from other entities.
+    The new style allows to savely use id filters on outgoing packets and listeners in specific namespaces at the same time without conflict.
+    The listeners won’t get called if the packets has a awaited id cause filterd and blocked before.
+    </li>
+    <li>WebSocket support for flash using javascript glue</li>
+    <li>Well .. i am not aware of any XMPP server supporting websockets except of my own :-). This will be handy anyway since its works around the flash cross domain policy.</li>
+    <li>ChatState notification fix</li>
+    <li>Roster rewrite (was f* messy)</li>
+    <li>Added TLS dependencies for flash and neko</li>
+    <li>StartTLS (except neko, air)
+        Use port 5222 for secure (and unsecure) connections now.
+        For flash you need to set a -D TLS compiler flag.
+    </li>
+    <li>TLS flash socketbridge supports unsecure connections as well</li>
+    <li>Added a flashpolicy server class (Needed for (socket based) filetransfers to a flash entities.
+    </li>
+    <li>fixes,fixes,fixes</li>
+</ul>
+
+
+</div>
+</div>
+</body>
+</html>
