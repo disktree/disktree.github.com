@@ -1,4 +1,3 @@
-source: tpl
 destination: _site
 markdown: rdiscount
 pygments: false
