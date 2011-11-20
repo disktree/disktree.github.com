@@ -2,7 +2,7 @@
 layout: post
 title: HXMPP Personal Event Protocol
 ---
-The next new XEP implemented by HXMPP is the Personal Eventing Protocol.
+The latestEP implemented in HXMPP is the [Personal Eventing Protocol](http://xmpp.org/extensions/xep-0163.html).
 
 Abstract:
 This specification defines semantics for using the XMPP publish-subscribe protocol to broadcast state change events associated with an instant messaging and presence account. This profile of pubsub therefore enables a standard XMPP user account to function as a virtual pubsub service, easing the discovery of syndicated data and event notifications associated with such an account.

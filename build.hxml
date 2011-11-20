@@ -3,3 +3,4 @@
 -cp src
 -js tpl/js/blog.js
 Blog
+--no-traces

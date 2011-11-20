@@ -16,5 +16,3 @@ As soon as a new item is published at a node, the service notifies all registere
 * **Configuration** is built into the service itself, not in the software you use for.  
  Publishers are able to config their service to their needs (like: manage subscription requests, cache items, not routing events to offline storage, block users,..).
  Subscribers can config their subscriptions, for example: to get just the title of the published data (bandwith again!) or to set the presence types which are allowed to receive notifications.
-
-Overall the current system (rss ect) is doing it completely wrong and hopefully gets dropped and replaced by pubsub like systems very soon!

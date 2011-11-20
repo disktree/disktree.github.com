@@ -45,7 +45,7 @@ Key-value pairs after ‘$’  specify optional settings, which are:
 The bot will return 5 values if no ‘limit’ options is specified.
 Type ‘help’, ‘fields’ or ‘options’ to display the possible request fields.
 <br>
-Here are some examples:
+Reuqest examples:
 <br>
 
 * Give me the most recent 5 sentences from vienna:

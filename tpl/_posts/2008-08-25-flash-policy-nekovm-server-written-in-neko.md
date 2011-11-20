@@ -3,9 +3,6 @@ layout: post
 title: Flash policy nekoVM server written in neko
 ---
 A simple flash-policy-server written in neko, for all minimalists.
-
-[fpserver.neko](/file/flashpolicyd.neko)
-
 <pre class="code">
 
 i32_new = $loader.loadprim( "std@int32_new", 1 );
@@ -80,3 +77,4 @@ while( true ) {
 }
 
 </pre>
+[fpserver.neko](/file/flashpolicyd.neko)
