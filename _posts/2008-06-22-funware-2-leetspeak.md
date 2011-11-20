@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Funware 2 : ël|†3 $|>€@|<
+title: ël|†3 $|>€@|<
 tags: [experiment]
 ---
 Leet or Eleet, also known as Leetspeak or Leetors (L3370rz), is an alphabet used primarily on the Internet, uses various combinations of ASCII characters to replace Latinate letters.

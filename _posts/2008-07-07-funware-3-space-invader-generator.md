@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Funware 4 : space invader generator
+title: Funware 3 - space invader generator
 tags: [experiment]
 ---
 ![superposition](/img/invade5.png)  
