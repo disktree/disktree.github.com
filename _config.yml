@@ -1,2 +1,4 @@
+source: tpl
+destination: www
 markdown: rdiscount
-pygments: true
+pygments: false
